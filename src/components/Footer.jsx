@@ -10,21 +10,23 @@ export default function Footer() {
         >
           {/* Marca */}
           <div>
-            <div className="lum-footer-logo">💅 Lumière Nail Spa</div>
+            <div className="lum-footer-logo">MOOKHA Spa de Uñas</div>
             <p className="lum-footer-tagline">
               Arte en tus manos.
               <br />
               Experiencias que perduran.
             </p>
+
+            {/* Cambiar color de los íconos */}
             <div className="lum-footer-socials">
               <a href="#" aria-label="Instagram">
-                📷
+                <span uk-icon="instagram"></span>
               </a>
               <a href="#" aria-label="TikTok">
-                🎵
+                <span uk-icon="tiktok"></span>
               </a>
               <a href="#" aria-label="WhatsApp">
-                💬
+                <span uk-icon="whatsapp"></span>
               </a>
             </div>
           </div>
@@ -54,10 +56,10 @@ export default function Footer() {
           <div>
             <h4 className="lum-footer-heading">Contáctanos</h4>
             <ul className="lum-footer-list lum-footer-contact">
-              <li>📍 Cali, Valle del Cauca, Colombia</li>
-              <li>📞 +57 300 000 0000</li>
-              <li>📧 hola@lumierenailspa.co</li>
-              <li>🕐 Lun–Sáb: 9 AM – 7 PM</li>
+              <li>📍 Neiva, Huila, Colombia</li>
+              <li>📞 +57 322 936 0394</li>
+              <li>📧 spa_mookha@gmail.com</li>
+              <li>🕐 Lun–Dom: 9 AM – 6 PM</li>
             </ul>
             <a
               href="#reservas"
@@ -72,11 +74,11 @@ export default function Footer() {
 
         <div className="lum-footer-bottom">
           <p>
-            © {new Date().getFullYear()} Lumière Nail Spa · Todos los derechos
-            reservados.
+            © {new Date().getFullYear()} MOOKHA Spa de Uñas · Todos los derechos
+            reservados
           </p>
-          <p style={{ opacity: 0.45, fontSize: ".75rem", marginTop: 4 }}>
-            Hecho con 💕 en Cali
+          <p style={{ opacity: 1, fontSize: ".8rem", marginTop: 4.5 }}>
+            Hecho con amor en Neiva ♡
           </p>
         </div>
       </div>

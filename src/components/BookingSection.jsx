@@ -6,7 +6,7 @@ export default function BookingSection() {
     <section id="reservas" className="uk-section lum-section-booking">
       <div className="uk-container">
         <div className="lum-section-header uk-text-center">
-          <div className="lum-section-tag">📅 Reservas</div>
+          <div className="lum-section-tag">Reservas</div>
           <h2 className="lum-section-title">
             Agenda tu <em>cita</em>
           </h2>

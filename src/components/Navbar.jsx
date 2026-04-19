@@ -28,7 +28,7 @@ export default function Navbar() {
       <nav className="lum-navbar uk-navbar-container" uk-navbar="">
         <div className="uk-navbar-left">
           <a className="uk-navbar-item uk-logo lum-logo" href="#">
-            💅 Lumière
+            💅 MOOKHA
           </a>
         </div>
 

@@ -1,6 +1,4 @@
-/* ============================================================
-   custom.css — estilos de todos los componentes
-   ============================================================ */
+/* Estilos de todos los componentes */
 
 /* ── Tipografía global ── */
 h1,
@@ -15,9 +13,7 @@ em {
   color: var(--lum-pink);
 }
 
-/* ═══════════════════════════════════════════
-   NAVBAR
-═══════════════════════════════════════════ */
+/* NAVBAR */
 .lum-navbar {
   background: rgba(22, 8, 26, 0.92);
   backdrop-filter: blur(16px);
@@ -31,17 +27,25 @@ em {
   color: var(--lum-pink) !important;
   letter-spacing: 0.02em;
 }
+
+/*Error de sombra*/
 .uk-navbar-nav > li > a {
   font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.65) !important;
-  transition: color 0.2s;
-}
-.uk-navbar-nav > li > a:hover {
   color: var(--lum-pink) !important;
+}
+
+/*mejor posición de reservas*/
+.uk-navbar-nav > li:last-child {
+  margin-right: 25px;
+}
+
+/*mejor posición de emoji y nombre*/
+.uk-navbar-left > a {
+  margin-left: 20px;
 }
 
 .lum-offcanvas {
@@ -56,9 +60,7 @@ em {
   color: var(--lum-pink);
 }
 
-/* ═══════════════════════════════════════════
-   HERO
-═══════════════════════════════════════════ */
+/*  HERO */
 .lum-hero {
   background:
     radial-gradient(
@@ -79,6 +81,7 @@ em {
   pointer-events: none;
 }
 
+/* Circulo de fondo */
 .lum-hero-badge {
   display: inline-block;
   background: rgba(244, 114, 182, 0.12);
@@ -183,14 +186,12 @@ em {
 }
 .lum-stat-label {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
   letter-spacing: 0.07em;
 }
 
-/* ═══════════════════════════════════════════
-   SECCIONES (estructura común)
-═══════════════════════════════════════════ */
+/* SECCIONES (estructura común) */
 .lum-section-dark {
   background: var(--lum-bg-dark);
 }
@@ -220,7 +221,7 @@ em {
 
 .lum-section-tag {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -239,15 +240,13 @@ em {
 
 .lum-section-sub {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.62);
   max-width: 480px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
-/* ═══════════════════════════════════════════
-   SERVICIOS — cards
-═══════════════════════════════════════════ */
+/* SERVICIOS — CARDS */
 .lum-service-card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(244, 114, 182, 0.08);
@@ -270,6 +269,17 @@ em {
   border-color: rgba(126, 63, 110, 0.1);
 }
 
+.lum-price {
+  display: inline-block;
+  background: rgba(244, 114, 182, 0.1);
+  color: var(--lum-pink);
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+  border: 1px solid rgba(244, 114, 182, 0.2);
+}
+
 .lum-card-img {
   height: 100px;
   display: flex;
@@ -279,6 +289,21 @@ em {
   position: relative;
   overflow: hidden;
 }
+
+.lum-badge-card {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--lum-pink);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 50px;
+}
+
 /* Fondos degradados por servicio */
 .sc-bg1 {
   background: linear-gradient(135deg, #fce4ec, #f8bbd0);
@@ -299,34 +324,7 @@ em {
   background: linear-gradient(135deg, #fff3e0, #ffe0b2);
 }
 
-.lum-badge-card {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--lum-pink);
-  color: #fff;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 3px 9px;
-  border-radius: 50px;
-}
-
-.lum-price {
-  display: inline-block;
-  background: rgba(244, 114, 182, 0.1);
-  color: var(--lum-pink);
-  font-weight: 600;
-  font-size: 0.82rem;
-  padding: 4px 12px;
-  border-radius: 50px;
-  border: 1px solid rgba(244, 114, 182, 0.2);
-}
-
-/* ═══════════════════════════════════════════
-   GALERÍA
-═══════════════════════════════════════════ */
+/*  GALERÍA  */
 .lum-gallery-item {
   border-radius: var(--radius-lg);
   height: 180px;
@@ -378,9 +376,7 @@ em {
   background: linear-gradient(135deg, #3e0000, #ff6f00);
 }
 
-/* ═══════════════════════════════════════════
-   EQUIPO — cards
-═══════════════════════════════════════════ */
+/* EQUIPO — CARDS */
 .lum-team-card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(244, 114, 182, 0.08);
@@ -430,7 +426,7 @@ em {
 }
 .lum-team-role {
   font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.64);
   margin-bottom: 8px;
 }
 .lum-team-stars {
@@ -456,9 +452,7 @@ em {
   border-radius: 50px;
 }
 
-/* ═══════════════════════════════════════════
-   RESEÑAS — cards slider
-═══════════════════════════════════════════ */
+/* RESEÑAS — cards slider */
 .lum-review-card {
   background: #fff !important;
   border-radius: var(--radius-lg) !important;
@@ -534,9 +528,7 @@ em {
   background: var(--lum-pink-dark);
 }
 
-/* ═══════════════════════════════════════════
-   BOOKING SECTION WRAPPER
-═══════════════════════════════════════════ */
+/* BOOKING SECTION WRAPPER */
 .lum-booking-wrapper {
   display: flex;
   justify-content: center;
@@ -551,9 +543,7 @@ em {
   backdrop-filter: blur(12px);
 }
 
-/* ═══════════════════════════════════════════
-   BOOKING APP — calendario
-═══════════════════════════════════════════ */
+/* BOOKING APP — calendario */
 .booking-step {
   font-size: 0.7rem;
   font-weight: 600;
@@ -673,9 +663,7 @@ em {
   background: var(--lum-pink-light);
 }
 
-/* ═══════════════════════════════════════════
-   BOOKING — slots de horario
-═══════════════════════════════════════════ */
+/* BOOKING — slots de horario */
 .time-slots {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -729,9 +717,7 @@ em {
   font-weight: 600;
 }
 
-/* ═══════════════════════════════════════════
-   BOOKING — formulario
-═══════════════════════════════════════════ */
+/* BOOKING — formulario */
 .booking-form {
   display: flex;
   flex-direction: column;
@@ -804,9 +790,7 @@ em {
   opacity: 0.92;
 }
 
-/* ═══════════════════════════════════════════
-   BOOKING — pantalla éxito
-═══════════════════════════════════════════ */
+/* BOOKING — pantalla éxito */
 .booking-success {
   text-align: center;
   padding: 12px 0;
@@ -856,9 +840,7 @@ em {
   background: rgba(244, 114, 182, 0.1);
 }
 
-/* ═══════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════ */
+/* FOOTER */
 .lum-footer {
   background: #0e0414;
   padding: 64px 0 32px;
@@ -925,9 +907,7 @@ em {
   color: rgba(255, 255, 255, 0.3);
 }
 
-/* ═══════════════════════════════════════════
-   UIkit overrides generales
-═══════════════════════════════════════════ */
+/* UIkit overrides generales */
 .uk-section {
   padding: 80px 0;
 }

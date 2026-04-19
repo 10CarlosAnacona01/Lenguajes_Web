@@ -5,7 +5,7 @@ export const REVIEWS_DATA = [
     name: "Andrea M.",
     sub: "Cliente desde 2022",
     stars: "★★★★★",
-    text: "¡El mejor nail art de Cali! Valentina me hizo el diseño que siempre soñé, duró semanas perfectas.",
+    text: "¡El mejor spa de Neiva! Valentina me hizo el diseño que siempre soñé, duró semanas perfectas.",
   },
   {
     av: "av2",
@@ -17,8 +17,8 @@ export const REVIEWS_DATA = [
   },
   {
     av: "av3",
-    em: "🧑‍🦰",
-    name: "Laura G.",
+    em: "🧑",
+    name: "Luis G.",
     sub: "Cliente VIP",
     stars: "★★★★★",
     text: "Reservé por primera vez online y fue facilísimo. El spa de manos fue una experiencia increíble.",
@@ -29,7 +29,7 @@ export const REVIEWS_DATA = [
     name: "Daniela R.",
     sub: "Cliente desde 2023",
     stars: "★★★★★",
-    text: "Las acrílicas me duraron un mes entero sin una sola rotura. Mariana es un genio del nail art 3D.",
+    text: "Las acrílicas me duraron un mes entero sin una sola rotura. Mariana es una genia del nail art 3D.",
   },
   {
     av: "av5",
@@ -43,7 +43,7 @@ export const REVIEWS_DATA = [
     av: "av6",
     em: "👩‍🦲",
     name: "Juliana F.",
-    sub: "Cliente desde 2021",
+    sub: "Cliente desde 2023",
     stars: "★★★★★",
     text: "Llevo 3 años viniendo y jamás me han decepcionado. Cada visita es mejor que la anterior. ¡Las amo!",
   },

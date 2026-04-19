@@ -6,7 +6,7 @@ export default function TeamSection() {
     <section id="equipo" className="uk-section lum-section-dark">
       <div className="uk-container">
         <div className="lum-section-header uk-text-center">
-          <div className="lum-section-tag">👩‍🎨 Equipo</div>
+          <div className="lum-section-tag">Equipo</div>
           <h2 className="lum-section-title">
             Las artistas <em>detrás</em>
           </h2>

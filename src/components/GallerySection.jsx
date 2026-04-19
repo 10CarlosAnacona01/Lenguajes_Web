@@ -1,20 +1,12 @@
 import React from "react";
-
-const GALLERY_ITEMS = [
-  { emoji: "🌸", label: "Floral Pastel", cls: "g1" },
-  { emoji: "💎", label: "Crystal Chrome", cls: "g2" },
-  { emoji: "🌙", label: "Galaxy Night", cls: "g3" },
-  { emoji: "🌿", label: "Botanical Green", cls: "g4" },
-  { emoji: "🦋", label: "Butterfly Dreams", cls: "g5" },
-  { emoji: "🔥", label: "Lava Ombré", cls: "g6" },
-];
+import { GALLERY_ITEMS } from "../data/gallery_items.js";
 
 export default function GallerySection() {
   return (
     <section id="galeria" className="uk-section lum-section-light">
       <div className="uk-container">
         <div className="lum-section-header uk-text-center">
-          <div className="lum-section-tag">🎨 Galería</div>
+          <div className="lum-section-tag">Galería</div>
           <h2 className="lum-section-title">
             Arte que <em>inspira</em>
           </h2>

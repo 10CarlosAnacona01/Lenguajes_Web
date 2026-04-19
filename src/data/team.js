@@ -2,9 +2,9 @@ export const TEAM_DATA = [
   {
     emoji: "👩‍🎨",
     name: "Valentina Torres",
-    role: "Fundadora & Nail Artist",
+    role: "Fundadora y Manicurista",
     stars: "★★★★★",
-    specs: ["Nail Art", "Gel", "Acrílicas"],
+    specs: ["Semipermanentes ", "Gel", "Acrílicas"],
     bg: "ta-bg1",
   },
   {

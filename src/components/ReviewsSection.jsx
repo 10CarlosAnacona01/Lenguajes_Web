@@ -6,7 +6,7 @@ export default function ReviewsSection() {
     <section id="reseñas" className="uk-section lum-section-light">
       <div className="uk-container">
         <div className="lum-section-header uk-text-center">
-          <div className="lum-section-tag">⭐ Reseñas</div>
+          <div className="lum-section-tag">Reseñas</div>
           <h2 className="lum-section-title">
             Lo que dicen <em>ellas</em>
           </h2>

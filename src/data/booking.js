@@ -13,12 +13,13 @@ export const MONTHS = [
   "Diciembre",
 ];
 
-export const DAYS_SHORT = ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"];
+// Cambiamos posición del Domingo de primer día a último
+export const DAYS_SHORT = ["Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"];
 
 export const SERVICES_LIST = [
   "Manicura Clásica",
   "Gel Permanente",
-  "Nail Art Premium",
+  "Spa Uñas Premium",
   "Acrílicas",
   "Spa de Manos",
   "Pedicura Luxury",

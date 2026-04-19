@@ -6,7 +6,7 @@ export default function ServicesSection() {
     <section id="servicios" className="uk-section lum-section-dark">
       <div className="uk-container">
         <div className="lum-section-header uk-text-center">
-          <div className="lum-section-tag">💅 Servicios</div>
+          <div className="lum-section-tag">Servicios</div>
           <h2 className="lum-section-title">
             Lo que hacemos <em>mejor</em>
           </h2>

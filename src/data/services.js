@@ -21,7 +21,7 @@ export const SERVICES_DATA = [
     desc: "Diseños personalizados con piedras y pigmentos.",
     price: "Desde $80.000",
     bg: "sc-bg3",
-    badge: "Trending",
+    badge: "Popular",
   },
   {
     icon: "✨",
