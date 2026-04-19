@@ -1,0 +1,46 @@
+/* ============================================================
+   variables.css — tokens de diseño globales
+   ============================================================ */
+:root {
+  /* Paleta */
+  --lum-pink: #f472b6;
+  --lum-pink-light: #fbcfe8;
+  --lum-pink-dark: #db2777;
+  --lum-rose: #fda4af;
+  --lum-plum: #7e3f6e;
+  --lum-plum-light: #c084a8;
+  --lum-cream: #fff1f7;
+  --lum-white: #ffffff;
+
+  /* Fondos sección */
+  --lum-bg-dark: #1a0a14;
+  --lum-bg-mid: #22102a;
+  --lum-bg-light: #f9f0f4;
+  --lum-bg-booking: #16081a;
+
+  /* Tipografía */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* Radios */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  /* Sombras */
+  --shadow-card: 0 4px 30px rgba(244, 114, 182, 0.1);
+  --shadow-hover: 0 8px 40px rgba(244, 114, 182, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--lum-bg-dark);
+  color: var(--lum-white);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
