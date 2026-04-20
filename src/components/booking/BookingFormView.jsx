@@ -41,8 +41,7 @@ export default function BookingFormView({
         }}
       >
         <span style={{ color: "rgba(255,255,255,.75)", fontSize: ".88rem" }}>
-          📅 {selectedDate.day} de {MONTHS[selectedDate.month]}{" "}
-          {selectedDate.year}
+          {selectedDate.day} de {MONTHS[selectedDate.month]} {selectedDate.year}
         </span>
         <button
           onClick={onBack}
@@ -61,7 +60,7 @@ export default function BookingFormView({
       </div>
 
       <div className="time-slots">
-        <div className="time-slots-title">🕐 Elige tu horario</div>
+        <div className="time-slots-title"> Elige tu horario</div>
         <div className="slots-grid">
           {slots.map((s) => {
             let cls = "slot";
@@ -84,13 +83,13 @@ export default function BookingFormView({
         <div className="form-row">
           <input
             className="form-input"
-            placeholder="Tu nombre 💕"
+            placeholder="Tu nombre"
             value={form.name}
             onChange={(e) => onFormChange("name", e.target.value)}
           />
           <input
             className="form-input"
-            placeholder="WhatsApp 📱"
+            placeholder="WhatsApp"
             value={form.phone}
             onChange={(e) => onFormChange("phone", e.target.value)}
           />
@@ -101,7 +100,7 @@ export default function BookingFormView({
           value={form.service}
           onChange={(e) => onFormChange("service", e.target.value)}
         >
-          <option value="">✨ ¿Qué servicio deseas?</option>
+          <option value="">¿Qué servicio deseas?</option>
           {SERVICES_LIST.map((s) => (
             <option key={s} value={s}>
               {s}
@@ -114,7 +113,7 @@ export default function BookingFormView({
           value={form.artist}
           onChange={(e) => onFormChange("artist", e.target.value)}
         >
-          <option value="">👩‍🎨 Especialista (opcional)</option>
+          <option value="">Especialista (opcional)</option>
           {ARTISTS.map((a) => (
             <option key={a} value={a}>
               {a}
@@ -127,7 +126,7 @@ export default function BookingFormView({
           onClick={onConfirm}
           disabled={!isValid || loading}
         >
-          {loading ? "⏳ Confirmando tu cita..." : "💅 Confirmar Reserva"}
+          {loading ? "Confirmando tu cita..." : "Confirmar Reserva"}
         </button>
       </div>
     </>

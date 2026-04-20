@@ -14,10 +14,10 @@ export default function SuccessView({ confirmation, onReset }) {
         breve.
       </div>
       <div>
-        <span className="success-tag">📅 {confirmation.date}</span>
-        <span className="success-tag">🕐 {confirmation.time}</span>
-        <span className="success-tag">💅 {confirmation.service}</span>
-        <span className="success-tag">👩‍🎨 {confirmation.artist}</span>
+        <span className="success-tag"> {confirmation.date}</span>
+        <span className="success-tag"> {confirmation.time}</span>
+        <span className="success-tag"> {confirmation.service}</span>
+        <span className="success-tag"> {confirmation.artist}</span>
       </div>
       <button className="btn-new" onClick={onReset}>
         + Hacer otra reserva

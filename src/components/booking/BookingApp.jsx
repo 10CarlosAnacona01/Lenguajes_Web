@@ -92,7 +92,7 @@ export default function BookingApp() {
     });
     setLoading(false);
     setStep(3);
-    showToast("🎉 ¡Cita confirmada! Te llegará un WhatsApp pronto.", "primary");
+    showToast("¡Cita confirmada! Te llegará un mensaje deWhatsApp pronto.", "primary");
   }
 
   function handleReset() {

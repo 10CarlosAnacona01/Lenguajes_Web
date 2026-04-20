@@ -83,10 +83,10 @@ export default function CalendarView({
 
       <p
         style={{
-          fontSize: ".72rem",
-          color: "rgba(255,255,255,.32)",
+          fontSize: ".75rem",
+          color: "rgba(255,255,255,.55)",
           textAlign: "center",
-          marginTop: 4,
+          marginTop: 4
         }}
       >
         ● Hay disponibilidad · Selecciona un día para continuar
