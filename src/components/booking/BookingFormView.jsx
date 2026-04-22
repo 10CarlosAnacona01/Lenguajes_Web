@@ -34,30 +34,12 @@ export default function BookingFormView({
         <div className="progress-step active"></div>
       </div>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: 16,
-        }}
-      >
-        <span style={{ color: "rgba(255,255,255,.75)", fontSize: ".88rem" }}>
+      <div className="booking-header">
+        <span className="booking-date">
           {selectedDate.day} de {MONTHS[selectedDate.month]} {selectedDate.year}
         </span>
-        <button
-          onClick={onBack}
-          style={{
-            background: "rgba(255,255,255,.08)",
-            border: "none",
-            color: "rgba(255,255,255,.6)",
-            borderRadius: 8,
-            padding: "5px 12px",
-            cursor: "pointer",
-            fontSize: ".78rem",
-          }}
-        >
-          ← Cambiar
+        <button onClick={onBack} className="btn-change-date">
+          Modificar fecha
         </button>
       </div>
 
@@ -94,6 +76,8 @@ export default function BookingFormView({
           <input
             className="form-input"
             placeholder="WhatsApp"
+            maxLength={10}
+            pattern="[0-9]{10}"
             value={form.phone ?? ""} // Operador de coalescencia nula (??) cuando sea null o undefined, asegurando que el valor sea siempre una cadena (en este caso vacia)
             onChange={(e) => onFormChange("phone", e.target.value)}
           />
