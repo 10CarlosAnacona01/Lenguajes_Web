@@ -25,32 +25,16 @@ export default function ServicesSection() {
             <div key={service.title}>
               <div className="uk-card lum-service-card">
                 <div className={`lum-card-img ${service.bg}`}>
-                  <span style={{ position: "relative", zIndex: 1 }}>
-                    {service.icon}
-                  </span>
+                  <span className="service-icon">{service.icon}</span>
                   {service.badge && (
                     <span className="lum-badge-card">{service.badge}</span>
                   )}
                 </div>
-                <div
-                  className="uk-card-body"
-                  style={{ padding: "18px 20px 20px" }}
-                >
-                  <h3
-                    className="uk-card-title lum-team-name"
-                    style={{ fontSize: "1.05rem", marginBottom: 6 }}
-                  >
+                <div className="uk-card-body service-card-body">
+                  <h3 className="uk-card-title lum-team-name service-title">
                     {service.title}
                   </h3>
-                  <p
-                    style={{
-                      fontSize: ".84rem",
-                      color: "#9d7a9d",
-                      marginBottom: 10,
-                    }}
-                  >
-                    {service.desc}
-                  </p>
+                  <p className="service-description">{service.desc}</p>
                   <span className="lum-price">{service.price}</span>
                 </div>
               </div>

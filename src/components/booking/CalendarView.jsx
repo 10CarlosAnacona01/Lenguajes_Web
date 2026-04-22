@@ -81,14 +81,7 @@ export default function CalendarView({
         })}
       </div>
 
-      <p
-        style={{
-          fontSize: ".75rem",
-          color: "rgba(255,255,255,.55)",
-          textAlign: "center",
-          marginTop: 4
-        }}
-      >
+      <p className="calendar-note">
         ● Hay disponibilidad · Selecciona un día para continuar
       </p>
     </>

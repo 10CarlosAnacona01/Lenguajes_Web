@@ -48,3 +48,12 @@ export const SERVICES_DATA = [
     badge: null,
   },
 ];
+
+export const SHORT_SERVICES = {
+  SH1: "Manicura Clásica",
+  SH2: "Gel Permanente",
+  SH3: "Nail Art Premium",
+  SH4: "Acrílicas",
+  SH5: "Spa de Manos",
+  SH6: "Pedicura Luxury",
+};

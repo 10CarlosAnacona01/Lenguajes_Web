@@ -22,7 +22,9 @@ export default function BookingFormView({
     booked: (bookedSlots[selectedDate.key] || []).includes(t),
   }));
 
-  const isValid = form.name && form.phone && form.service && selectedSlot;
+  // Método de JS para eliminar espacio de los extremos (al principio y final, no centro)
+  const isValid =
+    form.name.trim() && form.phone.trim() && form.service && selectedSlot;
 
   return (
     <>
@@ -63,9 +65,11 @@ export default function BookingFormView({
         <div className="time-slots-title"> Elige tu horario</div>
         <div className="slots-grid">
           {slots.map((s) => {
-            let cls = "slot";
-            if (s.booked) cls += " slot-booked";
-            if (selectedSlot === s.time) cls += " slot-selected";
+            const cls = `
+              slot
+              ${s.booked ? "slot-booked" : ""}
+              ${selectedSlot === s.time ? "slot-selected" : ""}
+            `;
             return (
               <div
                 key={s.time}
@@ -84,13 +88,13 @@ export default function BookingFormView({
           <input
             className="form-input"
             placeholder="Tu nombre"
-            value={form.name}
+            value={form.name || ""} // Siempre tenga un valor valido, un string (si tiene algo lo usa, sino una cadena vacía para evitar errores en React al usar un valor undefined o null)
             onChange={(e) => onFormChange("name", e.target.value)}
           />
           <input
             className="form-input"
             placeholder="WhatsApp"
-            value={form.phone}
+            value={form.phone ?? ""} // Operador de coalescencia nula (??) cuando sea null o undefined, asegurando que el valor sea siempre una cadena (en este caso vacia)
             onChange={(e) => onFormChange("phone", e.target.value)}
           />
         </div>

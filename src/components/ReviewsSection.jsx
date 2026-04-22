@@ -26,7 +26,7 @@ export default function ReviewsSection() {
                   <div className="uk-card lum-review-card">
                     <div className="uk-card-body">
                       <div className="lum-review-stars">{review.stars}</div>
-                      <p className="lum-review-text">"{review.text}"</p>
+                      <p className="lum-review-text">{review.text}</p>
                       <div className="lum-review-author">
                         <div className={`lum-author-avatar ${review.av}`}>
                           {review.em}
@@ -43,10 +43,7 @@ export default function ReviewsSection() {
             </ul>
           </div>
 
-          <ul
-            className="uk-slider-nav uk-dotnav uk-flex-center"
-            style={{ marginTop: 24 }}
-          ></ul>
+          <ul className="uk-slider-nav uk-dotnav uk-flex-center mt-24"></ul>
         </div>
       </div>
     </section>

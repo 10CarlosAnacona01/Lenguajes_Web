@@ -27,7 +27,7 @@ export default function Navbar() {
     >
       <nav className="lum-navbar uk-navbar-container" uk-navbar="">
         <div className="uk-navbar-left">
-          <a className="uk-navbar-item uk-logo lum-logo" href="#">
+          <a className="uk-navbar-item uk-logo lum-logo" href="/">
             💅 MOOKHA
           </a>
         </div>
@@ -61,15 +61,20 @@ export default function Navbar() {
             uk-navbar-toggle-icon=""
             uk-toggle="target: #offcanvas-nav"
             type="button"
+            aria-label="Abrir menú"
           />
         </div>
       </nav>
 
       {/* Off-canvas mobile */}
-      <div id="offcanvas-nav" uk-offcanvas="mode: slide; overlay: true">
+      <div
+        id="offcanvas-nav"
+        uk-offcanvas="mode: slide; overlay: true"
+        aria-label="Cerrar menú"
+      >
         <div className="uk-offcanvas-bar lum-offcanvas">
           <button className="uk-offcanvas-close" type="button" uk-close="" />
-          <ul className="uk-nav uk-nav-default" style={{ marginTop: 32 }}>
+          <ul className="uk-nav uk-nav-default mt-32">
             {["#servicios", "#galeria", "#equipo", "#reseñas", "#reservas"].map(
               (href, i) => {
                 const labels = [

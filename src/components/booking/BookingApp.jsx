@@ -21,21 +21,21 @@ const EMPTY_FORM = { name: "", phone: "", service: "", artist: "" };
 export default function BookingApp() {
   const today = new Date();
 
-  /* ── Calendario ── */
+  /*  Calendario  */
   const [viewYear, setViewYear] = useState(today.getFullYear());
   const [viewMonth, setViewMonth] = useState(today.getMonth());
 
-  /* ── Selección ── */
+  /*  Selección  */
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedSlot, setSelectedSlot] = useState(null);
 
-  /* ── Slots ocupados ── */
+  /*  Slots ocupados  */
   const [bookedSlots, setBookedSlots] = useState(INITIAL_BOOKED_MAP);
 
-  /* ── Formulario ── */
+  /*  Formulario  */
   const [form, setForm] = useState(EMPTY_FORM);
 
-  /* ── Flujo ── */
+  /*  Flujo  */
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [confirmation, setConfirmation] = useState(null);
@@ -46,7 +46,7 @@ export default function BookingApp() {
     today.getDate(),
   );
 
-  /* ── Handlers ── */
+  /*  Handlers  */
   function handlePrevMonth() {
     if (viewMonth === 0) {
       setViewMonth(11);

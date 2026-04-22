@@ -1,4 +1,6 @@
 import React from "react";
+import { CONTACT_DATA } from "../data/contact";
+import { SHORT_SERVICES } from "../data/services";
 
 export default function Footer() {
   return (
@@ -17,15 +19,27 @@ export default function Footer() {
               Experiencias que perduran.
             </p>
 
-            {/* Cambiar color de los íconos */}
             <div className="lum-footer-socials">
-              <a href="#" aria-label="Instagram">
+              {/* Se cancela el comportamiento por defecto del enlace */}
+              <a
+                href="#!"
+                onClick={(e) => e.preventDefault()}
+                aria-label="Instagram"
+              >
                 <span uk-icon="instagram"></span>
               </a>
-              <a href="#" aria-label="TikTok">
+              <a
+                href="#!"
+                onClick={(e) => e.preventDefault()}
+                aria-label="TikTok"
+              >
                 <span uk-icon="tiktok"></span>
               </a>
-              <a href="#" aria-label="WhatsApp">
+              <a
+                href="#!"
+                onClick={(e) => e.preventDefault()}
+                aria-label="WhatsApp"
+              >
                 <span uk-icon="whatsapp"></span>
               </a>
             </div>
@@ -35,14 +49,7 @@ export default function Footer() {
           <div>
             <h4 className="lum-footer-heading">Servicios</h4>
             <ul className="lum-footer-list">
-              {[
-                "Manicura Clásica",
-                "Gel Permanente",
-                "Nail Art Premium",
-                "Acrílicas",
-                "Spa de Manos",
-                "Pedicura Luxury",
-              ].map((s) => (
+              {Object.values(SHORT_SERVICES).map((s) => (
                 <li key={s}>
                   <a href="#servicios" uk-scroll="">
                     {s}
@@ -56,16 +63,15 @@ export default function Footer() {
           <div>
             <h4 className="lum-footer-heading">Contáctanos</h4>
             <ul className="lum-footer-list lum-footer-contact">
-              <li>📍 Neiva, Huila, Colombia</li>
-              <li>📞 +57 322 936 0394</li>
-              <li>📧 spa_mookha@gmail.com</li>
-              <li>🕐 Lun–Dom: 9 AM – 6 PM</li>
+              <li>📍 {CONTACT_DATA.location}</li>
+              <li>📞 {CONTACT_DATA.phone}</li>
+              <li>📧 {CONTACT_DATA.email}</li>
+              <li>🕐 {CONTACT_DATA.timetable}</li>
             </ul>
             <a
               href="#reservas"
               uk-scroll=""
-              className="lum-btn-primary"
-              style={{ display: "inline-block", marginTop: 16 }}
+              className="lum-btn-primary footer-reservations"
             >
               Reservar ahora
             </a>
@@ -77,9 +83,7 @@ export default function Footer() {
             © {new Date().getFullYear()} MOOKHA Spa de Uñas · Todos los derechos
             reservados
           </p>
-          <p style={{ opacity: 1, fontSize: ".8rem", marginTop: 4.5 }}>
-            Hecho con amor en Neiva ♡
-          </p>
+          <p className="footer-credit">Hecho con amor en Neiva ♡</p>
         </div>
       </div>
     </footer>
