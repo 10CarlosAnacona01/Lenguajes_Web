@@ -8,7 +8,7 @@ export default function Hero() {
     >
       <div className="uk-container uk-text-center">
         <div className="lum-hero-badge">
-          ✨ Spa Uñas Premium · Neiva, Colombia
+          Spa Uñas Palo Rosa · Neiva, Colombia
         </div>
         <h1 className="lum-hero-title">
           El arte en
@@ -23,7 +23,7 @@ export default function Hero() {
           <a href="#reservas" uk-scroll="" className="lum-btn-primary">
             Reserva tu cita
           </a>
-          <a href="#servicios" uk-scroll="" className="lum-btn-ghost">
+          <a href="#servicios" uk-scroll=""  className="lum-btn-ghost">
             Ver servicios
           </a>
         </div>
