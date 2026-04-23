@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Logo from "../img/slogan.jpg";
+import Logo from "../img/logo.jpg";
 
 export default function Navbar() {
   const stickyRef = useRef(null);

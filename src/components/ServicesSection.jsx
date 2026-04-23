@@ -25,7 +25,7 @@ export default function ServicesSection() {
             <div key={service.title}>
               <div className="uk-card lum-service-card">
                 <div className={`lum-card-img ${service.bg}`}>
-                  <span className="service-icon">{service.icon}</span>
+                  <span className="service-icon"></span>
                   {service.badge && (
                     <span className="lum-badge-card">{service.badge}</span>
                   )}
@@ -36,7 +36,8 @@ export default function ServicesSection() {
                   </h3>
                   <p className="service-description">{service.desc}</p>
                   <span className="lum-price">{service.price}</span>
-                </div>
+                  <p className="lum-category">{service.category}</p>
+              </div>
               </div>
             </div>
           ))}

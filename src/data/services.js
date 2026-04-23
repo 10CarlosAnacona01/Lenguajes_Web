@@ -1,52 +1,112 @@
 export const SERVICES_DATA = [
+ 
   {
-    icon: "💅",
-    title: "Manicura Clásica",
-    desc: "Limado, cutícula y color. La base de todo.",
-    price: "Desde $25.000",
-    bg: "sc-bg1",
-    badge: null,
+    "title": "Semipermanente",
+    "desc": "Manos perfectas por semanas con acabado brillante.",
+    "price": "Desde $40.000",
+    "bg": "sc-bg1",
+    "badge": "Popular",
+    "category": "Manicure & Pedicure"
   },
   {
-    icon: "💎",
-    title: "Gel Permanente",
-    desc: "Hasta 3 semanas sin despegarse. Brillo total.",
-    price: "Desde $55.000",
-    bg: "sc-bg2",
-    badge: "Popular",
+    "title": "Acrílico",
+    "desc": "Extensiones resistentes con acabado profesional.",
+    "price": "Desde $60.000",
+    "bg": "sc-bg2",
+    "badge": "Top",
+    "category": "Manicure & Pedicure"
   },
   {
-    icon: "🎨",
-    title: "Nail Art Premium",
-    desc: "Diseños personalizados con piedras y pigmentos.",
-    price: "Desde $80.000",
-    bg: "sc-bg3",
-    badge: "Popular",
+    "title": "Dipping",
+    "desc": "Aplicación en polvo para mayor durabilidad.",
+    "price": "Desde $50.000",
+    "bg": "sc-bg3",
+    "badge": "",
+    "category": "Manicure & Pedicure"
   },
   {
-    icon: "✨",
-    title: "Acrílicas",
-    desc: "Extensión duradera con acabado impecable.",
-    price: "Desde $90.000",
-    bg: "sc-bg4",
-    badge: null,
+    "title": "Técnica Polygel",
+    "desc": "Ligero y resistente, ideal para uñas largas.",
+    "price": "Desde $65.000",
+    "bg": "sc-bg4",
+    "badge": "Nuevo",
+    "category": "Manicure & Pedicure"
   },
   {
-    icon: "🌿",
-    title: "Spa de Manos",
-    desc: "Exfoliación, masaje y mascarilla hidratante.",
-    price: "Desde $45.000",
-    bg: "sc-bg5",
-    badge: null,
+    "title": "Soft Gel",
+    "desc": "Extensiones flexibles con acabado natural.",
+    "price": "Desde $55.000",
+    "bg": "sc-bg5",
+    "badge": "",
+    "category": "Manicure & Pedicure"
+  },
+
+  {
+    "title": "Lifting de pestañas",
+    "desc": "Realza tus pestañas naturales sin extensiones.",
+    "price": "Desde $45.000",
+    "bg": "sc-bg1",
+    "badge": "Popular",
+    "category": "Pestañas & Cejas"
   },
   {
-    icon: "🌸",
-    title: "Pedicura Luxury",
-    desc: "Ritual completo de cuidado y color para tus pies.",
-    price: "Desde $60.000",
-    bg: "sc-bg6",
-    badge: null,
+    "title": "Pestañas pelo a pelo",
+    "desc": "Volumen y longitud con efecto natural.",
+    "price": "Desde $70.000",
+    "bg": "sc-bg2",
+    "badge": "Top",
+    "category": "Pestañas & Cejas"
   },
+  {
+    "title": "Diseño de cejas",
+    "desc": "Define y da forma perfecta a tus cejas.",
+    "price": "Desde $25.000",
+    "bg": "sc-bg3",
+    "badge": "",
+    "category": "Pestañas & Cejas"
+  },
+
+  {
+    "title": "Repolarización capilar",
+    "desc": "Hidratación profunda y reparación del cabello.",
+    "price": "Desde $80.000",
+    "bg": "sc-bg1",
+    "badge": "Recomendado",
+    "category": "Cabello"
+  },
+  {
+    "title": "Keratina",
+    "desc": "Alisado y reducción del frizz duradero.",
+    "price": "Desde $120.000",
+    "bg": "sc-bg2",
+    "badge": "Top",
+    "category": "Cabello"
+  },
+  {
+    "title": "Tratamientos capilares",
+    "desc": "Nutrición y fortalecimiento personalizado.",
+    "price": "Desde $60.000",
+    "bg": "sc-bg3",
+    "badge": "",
+    "category": "Cabello"
+  },
+  {
+    "title": "Peinados",
+    "desc": "Estilos modernos para cualquier ocasión.",
+    "price": "Desde $50.000",
+    "bg": "sc-bg4",
+    "badge": "",
+    "category": "Cabello"
+  },
+
+  {
+    "title": "Maquillaje profesional",
+    "desc": "Look perfecto para eventos especiales.",
+    "price": "Desde $90.000",
+    "bg": "sc-bg1",
+    "badge": "Premium",
+    "category": "Maquillaje"
+  }
 ];
 
 export const SHORT_SERVICES = {

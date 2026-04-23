@@ -1,4 +1,4 @@
-/* Estilos de todos los componentes */
+  /* Estilos de todos los componentes */
 
 /* ── Tipografía global ── */
 h1,
@@ -76,7 +76,7 @@ em {
           rgba(0, 0, 0, 0.5),   /* oscuridad */
       rgba(0, 0, 0, 0.5)
     ),
-    url('../img/heroImg.jpg'),
+    url('../img/HeroImg.jpg'),
     var(--lum-bg-dark);
 
   background-size: cover;
@@ -301,6 +301,13 @@ em {
   padding: 4px 12px;
   border-radius: 50px;
   border: 1px solid rgba(244, 114, 182, 0.2);
+}
+
+.lum-category{
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--lum-white);
+  
 }
 
 .lum-card-img {
