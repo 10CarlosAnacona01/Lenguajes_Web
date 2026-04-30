@@ -12,7 +12,7 @@ export default function Footer() {
         >
           {/* Marca */}
           <div>
-            <div className="lum-footer-logo">MOOKHA Spa de Uñas</div>
+            <div className="lum-footer-logo">PALO ROSA Spa de Uñas</div>
             <p className="lum-footer-tagline">
               Arte en tus manos.
               <br />
@@ -80,7 +80,7 @@ export default function Footer() {
 
         <div className="lum-footer-bottom">
           <p>
-            © {new Date().getFullYear()} MOOKHA Spa de Uñas · Todos los derechos
+            © {new Date().getFullYear()} PALO ROSA Spa de Uñas · Todos los derechos
             reservados
           </p>
           <p className="footer-credit">Hecho con amor en Neiva ♡</p>

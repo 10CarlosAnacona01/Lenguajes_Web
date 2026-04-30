@@ -28,9 +28,13 @@ export default function Navbar() {
     >
       <nav className="lum-navbar uk-navbar-container" uk-navbar="">
         <div className="uk-navbar-left">
-          <a className="uk-navbar-item uk-logo lum-logo" href="/">
-            <img src={Logo} width="200" height="110" alt="Spa Uñas Logo"className="lum-logo-img" />
-          </a>
+          <div className="uk-navbar-item uk-logo lum-logo">
+            <img
+              src={Logo}
+              alt="Spa Uñas Logo"
+              className="lum-logo-img img-logo-navbar"
+            />
+          </div>
         </div>
 
         <div className="uk-navbar-right uk-visible@m">

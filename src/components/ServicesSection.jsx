@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { SERVICES_DATA } from "../data/services.js";
+import ServiceCategoryFilter from "./ServiceCategoryFilter.jsx";
+import FlipCard from "./FlipCard.jsx";
 
 export default function ServicesSection() {
+  const [activeCategory, setActiveCategory] = useState("Todos");
+
+  const filtered =
+    activeCategory === "Todos"
+      ? SERVICES_DATA
+      : SERVICES_DATA.filter((s) => s.category === activeCategory);
+
   return (
     <section id="servicios" className="uk-section lum-section-dark">
       <div className="uk-container">
@@ -11,34 +20,22 @@ export default function ServicesSection() {
             Lo que hacemos <em>mejor</em>
           </h2>
           <p className="lum-section-sub">
-            Cada servicio es una experiencia diseñada para mimarte de pies a
-            manos.
+            Toca cada tarjeta para ver el resultado del servicio.
           </p>
         </div>
+
+        <ServiceCategoryFilter
+          active={activeCategory}
+          onChange={setActiveCategory}
+        />
 
         <div
           className="uk-grid uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-medium"
           uk-grid=""
-          uk-scrollspy="cls: uk-animation-slide-bottom-small; target: > div; delay: 80; repeat: true"
         >
-          {SERVICES_DATA.map((service) => (
+          {filtered.map((service) => (
             <div key={service.title}>
-              <div className="uk-card lum-service-card">
-                <div className={`lum-card-img ${service.bg}`}>
-                  <span className="service-icon"></span>
-                  {service.badge && (
-                    <span className="lum-badge-card">{service.badge}</span>
-                  )}
-                </div>
-                <div className="uk-card-body service-card-body">
-                  <h3 className="uk-card-title lum-team-name service-title">
-                    {service.title}
-                  </h3>
-                  <p className="service-description">{service.desc}</p>
-                  <span className="lum-price">{service.price}</span>
-                  <p className="lum-category">{service.category}</p>
-              </div>
-              </div>
+              <FlipCard service={service} />
             </div>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { GALLERY_ITEMS } from "../data/gallery_items.js";
+import GalleryItem from "../components/GalleryItem.jsx";
 
 export default function GallerySection() {
   return (
@@ -22,10 +23,7 @@ export default function GallerySection() {
         >
           {GALLERY_ITEMS.map((item) => (
             <div key={item.cls}>
-              <div className={`lum-gallery-item ${item.cls}`}>
-                <span className="lum-gallery-emoji">{item.emoji}</span>
-                <span className="lum-gallery-label">{item.label}</span>
-              </div>
+              <GalleryItem item={item} />
             </div>
           ))}
         </div>

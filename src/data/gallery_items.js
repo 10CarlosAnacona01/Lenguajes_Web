@@ -1,8 +1,32 @@
 export const GALLERY_ITEMS = [
-  { emoji: "🌸", label: "Floral Pastel", cls: "g1" },
-  { emoji: "💎", label: "Crystal Chrome", cls: "g2" },
-  { emoji: "🌙", label: "Galaxy Night", cls: "g3" },
-  { emoji: "🌿", label: "Botanical Green", cls: "g4" },
-  { emoji: "🦋", label: "Butterfly Dreams", cls: "g5" },
-  { emoji: "🔥", label: "Lava Ombré", cls: "g6" },
+  {
+    label: "Floral Pastel",
+    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+    cls: "g1",
+  },
+  {
+    label: "Crystal Chrome",
+    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+    cls: "g2",
+  },
+  {
+    label: "Galaxy Night",
+    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+    cls: "g3",
+  },
+  {
+    label: "Botanical Green",
+    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+    cls: "g4",
+  },
+  {
+    label: "Butterfly Dreams",
+    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+    cls: "g5",
+  },
+  {
+    label: "Lava Ombré",
+    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
+    cls: "g6",
+  },
 ];
