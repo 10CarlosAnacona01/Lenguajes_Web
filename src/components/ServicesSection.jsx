@@ -1,16 +1,7 @@
-import React, { useState } from "react";
 import { SERVICES_DATA } from "../data/services.js";
-import ServiceCategoryFilter from "./ServiceCategoryFilter.jsx";
 import FlipCard from "./FlipCard.jsx";
 
 export default function ServicesSection() {
-  const [activeCategory, setActiveCategory] = useState("Todos");
-
-  const filtered =
-    activeCategory === "Todos"
-      ? SERVICES_DATA
-      : SERVICES_DATA.filter((s) => s.category === activeCategory);
-
   return (
     <section id="servicios" className="uk-section lum-section-dark">
       <div className="uk-container">
@@ -24,17 +15,12 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <ServiceCategoryFilter
-          active={activeCategory}
-          onChange={setActiveCategory}
-        />
-
         <div
-          className="uk-grid uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-medium"
-          uk-grid=""
+          className="uk-grid uk-grid-match uk-child-width-1-2@s uk-child-width-1-3@m"
+          data-uk-grid
         >
-          {filtered.map((service) => (
-            <div key={service.title}>
+          {SERVICES_DATA.map((service, index) => (
+            <div key={index}>
               <FlipCard service={service} />
             </div>
           ))}
