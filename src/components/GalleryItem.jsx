@@ -18,8 +18,6 @@ export default function GalleryItem({ item }) {
           className="lum-gallery-item"
           style={{
             backgroundImage: "url(" + imgSrc + ")",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
           }}
         >
           <div className="gallery-overlay" />

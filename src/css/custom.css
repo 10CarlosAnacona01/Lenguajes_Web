@@ -385,18 +385,20 @@ em {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
+  justify-content: flex-end;
+  padding-bottom: 14px;
   transition:
     transform 0.25s,
     box-shadow 0.25s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .lum-gallery-item:hover {
   transform: scale(1.03);
-  box-shadow: var(--shadow-hover);
 }
 
-.lum-gallery-emoji {
-  font-size: 2.5rem;
-}
 .lum-gallery-label {
   font-size: 0.78rem;
   font-weight: 500;
@@ -404,25 +406,8 @@ em {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.85);
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-}
-
-.g1 {
-  background: linear-gradient(135deg, #fce4ec, #f48fb1);
-}
-.g2 {
-  background: linear-gradient(135deg, #ede7f6, #b39ddb);
-}
-.g3 {
-  background: linear-gradient(135deg, #0d0221, #2d1b69);
-}
-.g4 {
-  background: linear-gradient(135deg, #e8f5e9, #66bb6a);
-}
-.g5 {
-  background: linear-gradient(135deg, #e3f2fd, #90caf9);
-}
-.g6 {
-  background: linear-gradient(135deg, #3e0000, #ff6f00);
+  position: relative;
+  z-index: 1;
 }
 
 /* EQUIPO — CARDS */
@@ -1003,13 +988,7 @@ em {
   }
 }
 
-/* DE PRUEBA*/
-
-.lum-gallery-item {
-  position: relative;
-  justify-content: flex-end;
-  padding-bottom: 14px;
-}
+/* DE PRUEBA GALLERIA*/
 
 .gallery-overlay {
   position: absolute;
@@ -1022,18 +1001,4 @@ em {
     transparent 100%
   );
   transition: background 0.3s;
-}
-
-.lum-gallery-item:hover .gallery-overlay {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.85) 0%,
-    rgba(0, 0, 0, 0.25) 55%,
-    transparent 100%
-  );
-}
-
-.lum-gallery-label {
-  position: relative;
-  z-index: 1;
 }

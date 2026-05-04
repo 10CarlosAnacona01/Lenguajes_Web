@@ -1,32 +1,26 @@
 export const GALLERY_ITEMS = [
   {
-    label: "Floral Pastel",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-    cls: "g1",
+    label: "Neutras naturales",
+    img: "../src/img/gallery/gallery1.png",
   },
   {
-    label: "Crystal Chrome",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-    cls: "g2",
+    label: "Floral marron",
+    img: "../src/img/gallery/gallery2.png",
   },
   {
-    label: "Galaxy Night",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-    cls: "g3",
+    label: "Floral glitter",
+    img: "../src/img/gallery/gallery3.png",
   },
   {
-    label: "Botanical Green",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-    cls: "g4",
+    label: "Con piedreria",
+    img: "../src/img/gallery/gallery4.png",
   },
   {
-    label: "Butterfly Dreams",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-    cls: "g5",
+    label: "Nude Elegance",
+    img: "../src/img/gallery/gallery5.png",
   },
   {
-    label: "Lava Ombré",
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80",
-    cls: "g6",
+    label: "Acrilicas francesas",
+    img: "../src/img/gallery/gallery6.png",
   },
 ];
