@@ -20,7 +20,6 @@ export default function GalleryItem({ item }) {
             backgroundImage: "url(" + imgSrc + ")",
           }}
         >
-          <div className="gallery-overlay" />
           <span className="lum-gallery-label">{item.label}</span>
         </div>
       </a>

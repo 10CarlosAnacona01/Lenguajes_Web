@@ -4,15 +4,13 @@ import { SERVICE_CATEGORIES } from "../data/services.js";
 
 export default function ServiceCategoryFilter({ active, onChange }) {
   return (
-    <div
-      className="uk-flex uk-flex-center uk-flex-wrap"
-      style={{ gap: 8, marginBottom: 28 }}
-    >
+    <div className="uk-flex uk-flex-center uk-flex-wrap filter-space-buttons">
       {SERVICE_CATEGORIES.map((cat) => (
         <button
           key={cat}
-          className={active === cat ? "lum-btn-primary" : "lum-btn-ghost"}
-          style={{ padding: "6px 18px", fontSize: "0.78rem" }}
+          className={`filter-service-button ${
+            active === cat ? "lum-btn-primary" : "lum-btn-ghost"
+          }`}
           onClick={() => onChange(cat)}
         >
           {cat}
