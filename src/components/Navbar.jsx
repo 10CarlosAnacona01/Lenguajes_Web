@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Logo from "../img/logo.jpg";
+import Logo from "../img/Logo-removebg-preview.png";
 
 export default function Navbar() {
   const stickyRef = useRef(null);
@@ -26,10 +26,12 @@ export default function Navbar() {
       ref={stickyRef}
       uk-sticky="sel-target: .lum-navbar; cls-active: uk-navbar-sticky; top: 50"
     >
-      <nav className="lum-navbar uk-navbar-container" uk-navbar="">
+   
+        <nav className="lum-navbar uk-navbar-container" uk-navbar="">
         <div className="uk-navbar-left">
           <div className="uk-navbar-item uk-logo lum-logo">
             <img
+            id="img-logo"
               src={Logo}
               alt="Spa Uñas Logo"
               className="lum-logo-img img-logo-navbar"
@@ -71,6 +73,8 @@ export default function Navbar() {
         </div>
       </nav>
 
+    
+      
       {/* Off-canvas mobile */}
       <div
         id="offcanvas-nav"

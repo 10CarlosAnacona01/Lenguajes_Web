@@ -42,41 +42,11 @@ function CardFront({ service }) {
 
 function CardBack({ service, onReserve }) {
   return (
-    <div className="lum-service-card service-card-back" >
-      {service.imgresult ? (
-        <img
-          src={service.imgresult}
-          alt={`Resultado ${service.title}`}
-          style={{
-            width: "100%",
-            height: "170px",
-            objectFit: "cover",
-            borderRadius: "12px",
-            flexShrink: 0,
-          }}
-        />
-      ) : (
-        <div
-          style={{
-            width: "100%",
-            height: "170px",
-            borderRadius: "12px",
-            background: "rgba(244,114,182,0.08)",
-            border: "1px dashed rgba(244,114,182,0.25)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "0.8rem",
-            color: "rgba(255,255,255,0.3)",
-            flexShrink: 0,
-          }}
-        >
-        </div>
-      )}
-      
-      <button className="btn-book reservation-button" onClick={onReserve}>
-        Reservar ahora
-      </button>
-    </div>
+    <div className="lum-service-card service-card-back" style={{backgroundImage: `url(${service.img})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"}} >
+    
+      </div>
   );
 }

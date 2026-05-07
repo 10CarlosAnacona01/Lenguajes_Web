@@ -20,7 +20,7 @@ export default function ReviewsSection() {
           uk-slider="autoplay: true; autoplay-interval: 4000; sets: true"
         >
           <div className="uk-slider-container uk-roundrob">
-            <ul className="uk-slider-items uk-grid uk-grid-medium uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-3@l">
+            <ul className="uk-slider-items slider-items uk-grid uk-grid-medium uk-child-width-1-1@s uk-child-width-1-2@m uk-child-width-1-3@l">
               {REVIEWS_DATA.map((review) => (
                 <li key={review.name}>
                   <div className="uk-card lum-review-card">

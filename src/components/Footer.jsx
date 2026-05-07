@@ -1,7 +1,7 @@
 import React from "react";
 import { CONTACT_DATA } from "../data/contact";
 import { SHORT_SERVICES } from "../data/services";
-
+import Logo from "../img/Logo-removebg-preview-white.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
@@ -20,7 +20,7 @@ export default function Footer() {
         >
           {/* Marca */}
           <div>
-            <div className="lum-footer-logo">PALO ROSA Spa de Uñas</div>
+            <div className="lum-footer-logo"> <img id="logo-footer" src={Logo} alt="" /></div>
             <p className="lum-footer-tagline">
               Arte en tus manos.
               <br />

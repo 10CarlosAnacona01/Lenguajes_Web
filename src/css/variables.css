@@ -18,9 +18,13 @@
   --lum-bg-booking: #16081a;
 
   /* Tipografía */
+
+  /*
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "DM Sans", sans-serif;
-
+*/
+--font-display: "Josefin Sans", sans-serif;
+--font-body: "Cormorant Garamond", Georgia, serif;
   /* Radios */
   --radius-sm: 8px;
   --radius-md: 16px;

@@ -1,3 +1,5 @@
+import { img } from "uikit";
+
 export const SERVICES_DATA = [
   {
     title: "Semipermanente",
@@ -7,7 +9,7 @@ export const SERVICES_DATA = [
     imgBg: "ta-bg1",
     badge: "Popular",
     duration: "45–60 min",
-    imgresult: "src/img/servicess/semipermanente.jpg", // ícono para el resultado del servicio
+    img: "src/img/servicess/semipermanente.jpg", // ícono para el resultado del servicio
   },
   {
     title: "Acrílico",
@@ -17,7 +19,7 @@ export const SERVICES_DATA = [
     imgBg: "ta-bg2",
     badge: "Top",
     duration: "60–90 min",
-    imgresult: "src/img/servicess/acrilicas.png",
+    img: "src/img/servicess/acrilicas.png",
   },
   {
     title: "Dipping",
@@ -27,7 +29,7 @@ export const SERVICES_DATA = [
     imgBg: "ta-bg3",
     badge: "",
     duration: "20–35 min",
-    imgresult: "src/img/servicess/dipping.jpg",
+    img: "src/img/servicess/dipping.jpg",
   },
   {
     title: "Técnica Polygel",
@@ -37,7 +39,7 @@ export const SERVICES_DATA = [
     imgBg: "ta-bg5",
     badge: "Nuevo",
     duration: "70–90 min",
-    imgresult: "src/img/servicess/polygel.jpg",
+    img: "src/img/servicess/polygel.jpg",
   },
   {
     title: "Soft Gel",
@@ -47,7 +49,7 @@ export const SERVICES_DATA = [
     imgBg: "ta-bg3",
     badge: "",
     duration: "60–75 min",
-    imgresult: "src/img/servicess/softgel.png",
+    img: "src/img/servicess/softgel.png",
   },
   {
     title: "Manicure tradicional",
@@ -57,7 +59,7 @@ export const SERVICES_DATA = [
     imgBg: "ta-bg1",
     badge: "Popular",
     duration: "30–40 min",
-    imgresult: "src/img/servicess/manicuretradicional.png",
+    img: "src/img/servicess/manicuretradicional.png",
   },
   {
     title: "Manicure rusa",
@@ -67,7 +69,7 @@ export const SERVICES_DATA = [
     imgBg: "ta-bg2",
     badge: "Top",
     duration: "30–45 min",
-    imgresult: "src/img/servicess/manicurerusa.png",
+    img: "src/img/servicess/manicurerusa.png",
   },
   {
     title: "Pedicure spa",
@@ -77,7 +79,7 @@ export const SERVICES_DATA = [
     imgBg: "ta-bg6",
     badge: "",
     duration: "40–60 min",
-    imgresult: "src/img/servicess/pedicurespa.png",
+    img: "src/img/servicess/pedicurespa.png",
   },
   {
     title: "Retiro de acrílico/gel",
@@ -87,7 +89,7 @@ export const SERVICES_DATA = [
     imgBg: "ta-bg4",
     badge: "Recomendado",
     duration: "20–30 min",
-    imgresult: "src/img/servicess/retiroacrilico.png",
+    img: "src/img/servicess/retiroacrilico.png",
   },
 ];
 

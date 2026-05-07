@@ -15,13 +15,16 @@ em {
 
 /* NAVBAR */
 .lum-navbar {
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(244, 114, 182, 0.08);
-  transition: box-shadow 0.3s;
-  background-color: #fbb8b8 !important;
-   background: rgba(217,165,174,0.75);
-  backdrop-filter: blur(10px) !important
+  backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid rgba(244, 114, 182, 0.08) !important;
+   transition: box-shadow 0.3s;
+   
+background: rgba(217, 165, 174, 0.75) !important;
+
 }
+
+
+
 .lum-logo {
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -32,13 +35,13 @@ em {
 
 /*Error de sombra*/
 .uk-navbar-nav > li > a {
-  font-family: var(--font-body);
+  font-family: var(--font-display) !important;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: white !important;
 }
+
 .uk-navbar-nav > li > a:hover {
   color: var(--lum-pink) !important;
   transform: scale(1.02);
@@ -79,19 +82,20 @@ em {
 .lum-hero {
   background:
     radial-gradient(rgba(0, 0, 0, 0.5), /* oscuridad */ rgba(0, 0, 0, 0.5)),
-    url("../img/HeroImg.jpg"), var(--lum-bg-dark);
+    url("../img/HeroImg.jpg"), var(--lum-bg-dark) !important;
+    
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  padding: 120px 0 80px;
-  position: relative;
-  overflow: hidden;
+  padding: 120px 0 80px !important;
+  position: relative !important;
+  overflow: hidden !important;
 
   width: 100%;
   min-height: 100vh;
 }
+
 .lum-hero::before {
   content: "";
   position: absolute;
@@ -247,6 +251,7 @@ em {
 
 .lum-section-tag {
   display: inline-block;
+  font-weight: 600;
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.12em;
@@ -287,10 +292,12 @@ em {
     box-shadow 0.25s,
     border-color 0.25s;
   height: 100%;
+  
 }
+
+
 .lum-service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+  transform: scale(1.01) ;
   border-color: rgba(244, 114, 182, 0.25);
 }
 
@@ -341,28 +348,12 @@ em {
 }
 
 /* Fondos degradados por servicio */
-.sc-bg1 {
-  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
-}
-.sc-bg2 {
-  background: linear-gradient(135deg, #e8d5f5, #d1a9f0);
-}
-.sc-bg3 {
-  background: linear-gradient(135deg, #ffd6e7, #ffb3d1);
-}
-.sc-bg4 {
-  background: linear-gradient(135deg, #e0f4ff, #b3e0ff);
-}
-.sc-bg5 {
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-}
-.sc-bg6 {
-  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
-}
+
 
 .filter-service-button {
   padding: 6px 18px;
   font-size: 0.78rem;
+  
 }
 
 .service-card-body {
@@ -419,13 +410,15 @@ em {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   gap: 10px;
   padding: 20px 18px;
   text-align: center;
   -webkit-backface-visibility: hidden;
   background: rgba(34, 16, 42, 0.98);
 }
+
+
 
 /*  GALERÍA  */
 .lum-gallery-item {
@@ -544,18 +537,15 @@ em {
 }
 
 /* Botón de reserva en la parte trasera de la tarjeta */
-.btn-book.reservation-button {
-  margin-top: 8px;
-  padding: 8px 10px;
-  font-size: 0.78rem;
-  width: fit-content; /* Ajusta el ancho al contenido (Texto + padding)*/
-}
+
 
 /* Tamaño de imagen ejemplo */
 .example-img {
 }
 
 /* RESEÑAS — cards slider */
+
+
 .lum-review-card {
   background: #fff !important;
   border-radius: var(--radius-lg) !important;
@@ -582,35 +572,6 @@ em {
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.lum-author-avatar {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  flex-shrink: 0;
-}
-.av1 {
-  background: #fce4ec;
-}
-.av2 {
-  background: #ede7f6;
-}
-.av3 {
-  background: #e8f5e9;
-}
-.av4 {
-  background: #fff8e1;
-}
-.av5 {
-  background: #e3f2fd;
-}
-.av6 {
-  background: #fce4ec;
 }
 
 .lum-author-name {
@@ -1055,4 +1016,8 @@ em {
   .uk-section {
     padding: 60px 0;
   }
+}
+#logo-footer{
+  width: 150px;
+  height: auto;
 }

@@ -20,7 +20,7 @@ export default function ServicesSection() {
           data-uk-grid
         >
           {SERVICES_DATA.map((service, index) => (
-            <div key={index}>
+            <div  key={index}>
               <FlipCard service={service} />
             </div>
           ))}
