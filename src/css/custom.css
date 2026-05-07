@@ -1,4 +1,4 @@
-  /* Estilos de todos los componentes */
+/* Estilos de todos los componentes */
 
 /* ── Tipografía global ── */
 h1,
@@ -19,6 +19,8 @@ em {
   border-bottom: 1px solid rgba(244, 114, 182, 0.08);
   transition: box-shadow 0.3s;
   background-color: #fbb8b8 !important;
+   background: rgba(217,165,174,0.75);
+  backdrop-filter: blur(10px) !important
 }
 .lum-logo {
   font-family: var(--font-display);
@@ -36,7 +38,6 @@ em {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: white !important;
-  
 }
 .uk-navbar-nav > li > a:hover {
   color: var(--lum-pink) !important;
@@ -69,15 +70,16 @@ em {
   margin-top: 32px;
 }
 
+.img-logo-navbar {
+  width: 170px;
+  height: 80px;
+}
+
 /*  HERO */
 .lum-hero {
-   background:
-    radial-gradient(
-          rgba(0, 0, 0, 0.5),   /* oscuridad */
-      rgba(0, 0, 0, 0.5)
-    ),
-    url('../img/HeroImg.jpg'),
-    var(--lum-bg-dark);
+  background:
+    radial-gradient(rgba(0, 0, 0, 0.5), /* oscuridad */ rgba(0, 0, 0, 0.5)),
+    url("../img/HeroImg.jpg"), var(--lum-bg-dark);
 
   background-size: cover;
   background-position: center;
@@ -152,7 +154,7 @@ em {
   font-weight: 500;
   font-size: 0.92rem;
   letter-spacing: 0.04em;
-  
+
   border: none;
   cursor: pointer;
   text-decoration: none !important;
@@ -175,7 +177,7 @@ em {
   font-weight: 400;
   font-size: 0.92rem;
   letter-spacing: 0.04em;
-  text-decoration: none !important; 
+  text-decoration: none !important;
   border: 1px solid rgba(255, 255, 255, 0.12);
   transition:
     background 0.2s,
@@ -212,8 +214,13 @@ em {
 
 /* SECCIONES (estructura común) */
 .lum-section-dark {
-  background: var(--lum-bg-dark);
-}
+
+  background: linear-gradient(
+    to bottom,
+    #1a000f 0%,
+    #2A0A1F 20%,
+    #2A0A1F 100%
+  );}
 .lum-section-light {
   background: var(--lum-bg-light);
 }
@@ -303,11 +310,10 @@ em {
   border: 1px solid rgba(244, 114, 182, 0.2);
 }
 
-.lum-category{
+.lum-category {
   font-family: var(--font-body);
   font-weight: 700;
   color: var(--lum-white);
-  
 }
 
 .lum-card-img {
@@ -354,9 +360,9 @@ em {
   background: linear-gradient(135deg, #fff3e0, #ffe0b2);
 }
 
-.service-icon {
-  position: relative;
-  z-index: 1;
+.filter-service-button {
+  padding: 6px 18px;
+  font-size: 0.78rem;
 }
 
 .service-card-body {
@@ -374,6 +380,53 @@ em {
   margin-bottom: 10px;
 }
 
+/*Espacio entre descripción y precio/categoría */
+.service-price-category {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: auto;
+  gap: 12px;
+}
+
+/* Profundidad de la tarjeta 3D */
+.card-rotation {
+  perspective: 900px;
+  height: 260px;
+  cursor: pointer;
+}
+
+.card-3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+/* Efecto de giro */
+.card-3d.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Tarjeta trasera */
+.service-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 18px;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  background: rgba(34, 16, 42, 0.98);
+}
+
 /*  GALERÍA  */
 .lum-gallery-item {
   border-radius: var(--radius-lg);
@@ -386,18 +439,21 @@ em {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
+  justify-content: flex-end;
+  padding-bottom: 14px;
   transition:
     transform 0.25s,
     box-shadow 0.25s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.lum-gallery-item:hover {
+.lum-gallery-item:hover  {
   transform: scale(1.03);
-  box-shadow: var(--shadow-hover);
+
 }
 
-.lum-gallery-emoji {
-  font-size: 2.5rem;
-}
 .lum-gallery-label {
   font-size: 0.78rem;
   font-weight: 500;
@@ -405,25 +461,8 @@ em {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.85);
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-}
-
-.g1 {
-  background: linear-gradient(135deg, #fce4ec, #f48fb1);
-}
-.g2 {
-  background: linear-gradient(135deg, #ede7f6, #b39ddb);
-}
-.g3 {
-  background: linear-gradient(135deg, #0d0221, #2d1b69);
-}
-.g4 {
-  background: linear-gradient(135deg, #e8f5e9, #66bb6a);
-}
-.g5 {
-  background: linear-gradient(135deg, #e3f2fd, #90caf9);
-}
-.g6 {
-  background: linear-gradient(135deg, #3e0000, #ff6f00);
+  position: relative;
+  z-index: 1;
 }
 
 /* EQUIPO — CARDS */
@@ -434,19 +473,18 @@ em {
   text-align: center;
   transition:
     transform 0.25s,
-    box-shadow 0.25s,
     border-color 0.25s;
   height: 100%;
 }
+
 .lum-team-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+  transform: scale(1.02);
+
   border-color: rgba(244, 114, 182, 0.25);
 }
 
 .lum-team-avatar {
-  width: 72px;
-  height: 72px;
+ 
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -454,17 +492,13 @@ em {
   font-size: 2rem;
   margin: 0 auto 14px;
 }
-.ta-bg1 {
-  background: linear-gradient(135deg, #fce4ec, #f48fb1);
-}
-.ta-bg2 {
-  background: linear-gradient(135deg, #ede7f6, #ce93d8);
-}
-.ta-bg3 {
-  background: linear-gradient(135deg, #e8f5e9, #a5d6a7);
-}
-.ta-bg4 {
-  background: linear-gradient(135deg, #fff8e1, #ffcc02);
+.lum-team-imgmember {
+    width: 100%;
+  height: 220px;      
+  object-fit: cover;
+  object-position: center top;  
+  border-radius: 10px 10px 0 0; 
+  display: block;
 }
 
 .lum-team-name {
@@ -500,6 +534,25 @@ em {
   letter-spacing: 0.05em;
   padding: 3px 9px;
   border-radius: 50px;
+}
+
+/* Información de la tarjeta en la parte frontal */
+.card-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón de reserva en la parte trasera de la tarjeta */
+.btn-book.reservation-button {
+  margin-top: 8px;
+  padding: 8px 10px;
+  font-size: 0.78rem;
+  width: fit-content; /* Ajusta el ancho al contenido (Texto + padding)*/
+}
+
+/* Tamaño de imagen ejemplo */
+.example-img {
 }
 
 /* RESEÑAS — cards slider */
@@ -872,10 +925,7 @@ em {
   text-align: center;
   padding: 12px 0;
 }
-.success-icon {
-  font-size: 3.5rem;
-  margin-bottom: 16px;
-}
+
 .success-title {
   font-family: var(--font-display);
   font-size: 1.8rem;
@@ -927,7 +977,7 @@ em {
   font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--lum-pink);
+  color: var(--lum-pink-light);
   margin-bottom: 12px;
 }
 .lum-footer-tagline {
@@ -944,7 +994,7 @@ em {
   font-size: 1.3rem;
   text-decoration: none;
   transition: transform 0.2s;
-  color: var(--lum-pink);
+  color: var(--lum-pink-light);
 }
 .lum-footer-socials a:hover {
   transform: scale(1.3);

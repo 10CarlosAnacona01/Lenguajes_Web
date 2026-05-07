@@ -1,112 +1,94 @@
 export const SERVICES_DATA = [
- 
   {
-    "title": "Semipermanente",
-    "desc": "Manos perfectas por semanas con acabado brillante.",
-    "price": "Desde $40.000",
-    "bg": "sc-bg1",
-    "badge": "Popular",
-    "category": "Manicure & Pedicure"
+    title: "Semipermanente",
+    desc: "Manos perfectas por semanas con acabado brillante.",
+    price: "Desde $90.000",
+    bg: "sc-bg1",
+    imgBg: "ta-bg1",
+    badge: "Popular",
+    duration: "45–60 min",
+    imgresult: "src/img/servicess/semipermanente.jpg", // ícono para el resultado del servicio
   },
   {
-    "title": "Acrílico",
-    "desc": "Extensiones resistentes con acabado profesional.",
-    "price": "Desde $60.000",
-    "bg": "sc-bg2",
-    "badge": "Top",
-    "category": "Manicure & Pedicure"
+    title: "Acrílico",
+    desc: "Extensiones resistentes con acabado profesional.",
+    price: "Desde $60.000",
+    bg: "sc-bg2",
+    imgBg: "ta-bg2",
+    badge: "Top",
+    duration: "60–90 min",
+    imgresult: "src/img/servicess/acrilicas.png",
   },
   {
-    "title": "Dipping",
-    "desc": "Aplicación en polvo para mayor durabilidad.",
-    "price": "Desde $50.000",
-    "bg": "sc-bg3",
-    "badge": "",
-    "category": "Manicure & Pedicure"
+    title: "Dipping",
+    desc: "Aplicación en polvo para mayor durabilidad.",
+    price: "Desde $50.000",
+    bg: "sc-bg3",
+    imgBg: "ta-bg3",
+    badge: "",
+    duration: "20–35 min",
+    imgresult: "src/img/servicess/dipping.jpg",
   },
   {
-    "title": "Técnica Polygel",
-    "desc": "Ligero y resistente, ideal para uñas largas.",
-    "price": "Desde $65.000",
-    "bg": "sc-bg4",
-    "badge": "Nuevo",
-    "category": "Manicure & Pedicure"
+    title: "Técnica Polygel",
+    desc: "Ligero y resistente, ideal para uñas largas.",
+    price: "Desde $105.000",
+    bg: "sc-bg4",
+    imgBg: "ta-bg5",
+    badge: "Nuevo",
+    duration: "70–90 min",
+    imgresult: "src/img/servicess/polygel.jpg",
   },
   {
-    "title": "Soft Gel",
-    "desc": "Extensiones flexibles con acabado natural.",
-    "price": "Desde $55.000",
-    "bg": "sc-bg5",
-    "badge": "",
-    "category": "Manicure & Pedicure"
-  },
-
-  {
-    "title": "Lifting de pestañas",
-    "desc": "Realza tus pestañas naturales sin extensiones.",
-    "price": "Desde $45.000",
-    "bg": "sc-bg1",
-    "badge": "Popular",
-    "category": "Pestañas & Cejas"
+    title: "Soft Gel",
+    desc: "Extensiones flexibles con acabado natural.",
+    price: "Desde $75.000",
+    bg: "sc-bg5",
+    imgBg: "ta-bg3",
+    badge: "",
+    duration: "60–75 min",
+    imgresult: "src/img/servicess/softgel.png",
   },
   {
-    "title": "Pestañas pelo a pelo",
-    "desc": "Volumen y longitud con efecto natural.",
-    "price": "Desde $70.000",
-    "bg": "sc-bg2",
-    "badge": "Top",
-    "category": "Pestañas & Cejas"
+    title: "Manicure tradicional",
+    desc: "Limpieza, limado y esmaltado clásico para un acabado natural.",
+    price: "Desde $50.000",
+    bg: "sc-bg1",
+    imgBg: "ta-bg1",
+    badge: "Popular",
+    duration: "30–40 min",
+    imgresult: "src/img/servicess/manicuretradicional.png",
   },
   {
-    "title": "Diseño de cejas",
-    "desc": "Define y da forma perfecta a tus cejas.",
-    "price": "Desde $25.000",
-    "bg": "sc-bg3",
-    "badge": "",
-    "category": "Pestañas & Cejas"
-  },
-
-  {
-    "title": "Repolarización capilar",
-    "desc": "Hidratación profunda y reparación del cabello.",
-    "price": "Desde $80.000",
-    "bg": "sc-bg1",
-    "badge": "Recomendado",
-    "category": "Cabello"
+    title: "Manicure rusa",
+    desc: "Técnica precisa en seco que perfecciona cutículas y contorno de la uña.",
+    price: "Desde $70.000",
+    bg: "sc-bg2",
+    imgBg: "ta-bg2",
+    badge: "Top",
+    duration: "30–45 min",
+    imgresult: "src/img/servicess/manicurerusa.png",
   },
   {
-    "title": "Keratina",
-    "desc": "Alisado y reducción del frizz duradero.",
-    "price": "Desde $120.000",
-    "bg": "sc-bg2",
-    "badge": "Top",
-    "category": "Cabello"
+    title: "Pedicure spa",
+    desc: "Cuidado profundo de pies con exfoliación, hidratación y esmaltado.",
+    price: "Desde $125.000",
+    bg: "sc-bg3",
+    imgBg: "ta-bg6",
+    badge: "",
+    duration: "40–60 min",
+    imgresult: "src/img/servicess/pedicurespa.png",
   },
   {
-    "title": "Tratamientos capilares",
-    "desc": "Nutrición y fortalecimiento personalizado.",
-    "price": "Desde $60.000",
-    "bg": "sc-bg3",
-    "badge": "",
-    "category": "Cabello"
+    title: "Retiro de acrílico/gel",
+    desc: "Eliminación segura del producto sin dañar la uña natural.",
+    price: "Desde $40.000",
+    bg: "sc-bg1",
+    imgBg: "ta-bg4",
+    badge: "Recomendado",
+    duration: "20–30 min",
+    imgresult: "src/img/servicess/retiroacrilico.png",
   },
-  {
-    "title": "Peinados",
-    "desc": "Estilos modernos para cualquier ocasión.",
-    "price": "Desde $50.000",
-    "bg": "sc-bg4",
-    "badge": "",
-    "category": "Cabello"
-  },
-
-  {
-    "title": "Maquillaje profesional",
-    "desc": "Look perfecto para eventos especiales.",
-    "price": "Desde $90.000",
-    "bg": "sc-bg1",
-    "badge": "Premium",
-    "category": "Maquillaje"
-  }
 ];
 
 export const SHORT_SERVICES = {

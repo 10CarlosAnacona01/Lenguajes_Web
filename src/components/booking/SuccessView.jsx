@@ -3,15 +3,14 @@ import React from "react";
 export default function SuccessView({ confirmation, onReset }) {
   return (
     <div className="booking-success">
-      <div className="success-icon">🎉</div>
       <div className="success-title">
         ¡Cita confirmada,
         <br />
         {confirmation.name}!
       </div>
       <div className="success-detail">
-        Te esperamos y recibirás un mensaje de confirmación a tu WhatsApp en
-        breve.
+        Recibirás un mensaje de confirmación a tu whatsApp en
+        breve, te esperamos.
       </div>
       <div>
         <span className="success-tag"> {confirmation.date}</span>

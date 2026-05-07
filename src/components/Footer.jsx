@@ -2,6 +2,14 @@ import React from "react";
 import { CONTACT_DATA } from "../data/contact";
 import { SHORT_SERVICES } from "../data/services";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLocationDot,
+  faPhone,
+  faEnvelope,
+  faClock,
+} from "@fortawesome/free-solid-svg-icons";
+
 export default function Footer() {
   return (
     <footer className="lum-footer">
@@ -12,7 +20,7 @@ export default function Footer() {
         >
           {/* Marca */}
           <div>
-            <div className="lum-footer-logo">MOOKHA Spa de Uñas</div>
+            <div className="lum-footer-logo">PALO ROSA Spa de Uñas</div>
             <p className="lum-footer-tagline">
               Arte en tus manos.
               <br />
@@ -63,10 +71,18 @@ export default function Footer() {
           <div>
             <h4 className="lum-footer-heading">Contáctanos</h4>
             <ul className="lum-footer-list lum-footer-contact">
-              <li>📍 {CONTACT_DATA.location}</li>
-              <li>📞 {CONTACT_DATA.phone}</li>
-              <li>📧 {CONTACT_DATA.email}</li>
-              <li>🕐 {CONTACT_DATA.timetable}</li>
+              <li>
+                <span uk-icon="location"></span> {CONTACT_DATA.location}
+              </li>
+              <li>
+                <span uk-icon="receiver"></span> {CONTACT_DATA.phone}
+              </li>
+              <li>
+                <span uk-icon="mail"></span> {CONTACT_DATA.email}
+              </li>
+              <li>
+                <span uk-icon="clock"></span> {CONTACT_DATA.timetable}
+              </li>
             </ul>
             <a
               href="#reservas"
@@ -80,8 +96,8 @@ export default function Footer() {
 
         <div className="lum-footer-bottom">
           <p>
-            © {new Date().getFullYear()} MOOKHA Spa de Uñas · Todos los derechos
-            reservados
+            © {new Date().getFullYear()} PALO ROSA Spa de Uñas · Todos los
+            derechos reservados
           </p>
           <p className="footer-credit">Hecho con amor en Neiva ♡</p>
         </div>

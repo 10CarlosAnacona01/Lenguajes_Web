@@ -1,14 +1,14 @@
 export const TEAM_DATA = [
   {
-    emoji: "👩‍🎨",
+    img: "src/img/equipo/miembro1.png",
     name: "Valentina Torres",
     role: "Fundadora y Manicurista",
     stars: "★★★★★",
     specs: ["Semipermanentes ", "Gel", "Acrílicas"],
-    bg: "ta-bg1",
+      bg: "ta-bg1",
   },
   {
-    emoji: "💁‍♀️",
+    img: "src/img/equipo/miembro2.png",
     name: "Isabela Ríos",
     role: "Especialista en Gel",
     stars: "★★★★★",
@@ -16,7 +16,7 @@ export const TEAM_DATA = [
     bg: "ta-bg2",
   },
   {
-    emoji: "🧖‍♀️",
+    img: "src/img/equipo/miembro3.png",
     name: "Camila Vega",
     role: "Terapeuta Spa",
     stars: "★★★★★",
@@ -24,7 +24,7 @@ export const TEAM_DATA = [
     bg: "ta-bg3",
   },
   {
-    emoji: "🎭",
+    img: "src/img/equipo/miembro4.png",
     name: "Mariana López",
     role: "Artista Especializada",
     stars: "★★★★★",

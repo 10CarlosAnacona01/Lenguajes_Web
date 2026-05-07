@@ -1,8 +1,26 @@
 export const GALLERY_ITEMS = [
-  { emoji: "🌸", label: "Floral Pastel", cls: "g1" },
-  { emoji: "💎", label: "Crystal Chrome", cls: "g2" },
-  { emoji: "🌙", label: "Galaxy Night", cls: "g3" },
-  { emoji: "🌿", label: "Botanical Green", cls: "g4" },
-  { emoji: "🦋", label: "Butterfly Dreams", cls: "g5" },
-  { emoji: "🔥", label: "Lava Ombré", cls: "g6" },
+  {
+    label: "Neutras naturales",
+    img: "../src/img/gallery/gallery1.png",
+  },
+  {
+    label: "Floral marron",
+    img: "../src/img/gallery/gallery2.png",
+  },
+  {
+    label: "Floral glitter",
+    img: "../src/img/gallery/gallery3.png",
+  },
+  {
+    label: "Con piedreria",
+    img: "../src/img/gallery/gallery4.png",
+  },
+  {
+    label: "Nude Elegance",
+    img: "../src/img/gallery/gallery5.png",
+  },
+  {
+    label: "Acrilicas francesas",
+    img: "../src/img/gallery/gallery6.png",
+  },
 ];

@@ -28,9 +28,7 @@ export default function ReviewsSection() {
                       <div className="lum-review-stars">{review.stars}</div>
                       <p className="lum-review-text">{review.text}</p>
                       <div className="lum-review-author">
-                        <div className={`lum-author-avatar ${review.av}`}>
-                          {review.em}
-                        </div>
+                       
                         <div>
                           <div className="lum-author-name">{review.name}</div>
                           <div className="lum-author-sub">{review.sub}</div>

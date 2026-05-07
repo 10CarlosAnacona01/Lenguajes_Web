@@ -1,7 +1,6 @@
 export const REVIEWS_DATA = [
   {
     av: "av1",
-    em: "👩",
     name: "Andrea M.",
     sub: "Cliente desde 2022",
     stars: "★★★★★",
@@ -9,7 +8,6 @@ export const REVIEWS_DATA = [
   },
   {
     av: "av2",
-    em: "👱‍♀️",
     name: "Sofía P.",
     sub: "Cliente frecuente",
     stars: "★★★★★",
@@ -17,7 +15,6 @@ export const REVIEWS_DATA = [
   },
   {
     av: "av3",
-    em: "🧑",
     name: "Luis G.",
     sub: "Cliente VIP",
     stars: "★★★★★",
@@ -25,7 +22,6 @@ export const REVIEWS_DATA = [
   },
   {
     av: "av4",
-    em: "👩‍🦱",
     name: "Daniela R.",
     sub: "Cliente desde 2023",
     stars: "★★★★★",
@@ -33,7 +29,6 @@ export const REVIEWS_DATA = [
   },
   {
     av: "av5",
-    em: "👩‍🦳",
     name: "Natalia C.",
     sub: "Cliente nueva",
     stars: "★★★★★",
@@ -41,7 +36,6 @@ export const REVIEWS_DATA = [
   },
   {
     av: "av6",
-    em: "👩‍🦲",
     name: "Juliana F.",
     sub: "Cliente desde 2023",
     stars: "★★★★★",

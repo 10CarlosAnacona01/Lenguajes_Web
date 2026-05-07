@@ -27,7 +27,7 @@ export default function TeamSection() {
               <div className="uk-card lum-team-card">
                 <div className="uk-card-body">
                   <div className={`lum-team-avatar ${member.bg}`}>
-                    {member.emoji}
+                    <img className="lum-team-imgmember" src={member.img} alt="" />
                   </div>
                   <div className="lum-team-name">{member.name}</div>
                   <div className="lum-team-role">{member.role}</div>
