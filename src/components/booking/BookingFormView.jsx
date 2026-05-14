@@ -5,7 +5,7 @@ import {
   SERVICES_LIST,
   ARTISTS,
 } from "../../data/booking.js";
-
+import emailjs from "@emailjs/browser";
 export default function BookingFormView({
   selectedDate,
   selectedSlot,
@@ -69,23 +69,34 @@ export default function BookingFormView({
         <div className="form-row">
           <input
             className="form-input"
+            name="user_name"
             placeholder="Tu nombre"
             value={form.name || ""} // Siempre tenga un valor valido, un string (si tiene algo lo usa, sino una cadena vacía para evitar errores en React al usar un valor undefined o null)
             onChange={(e) => onFormChange("name", e.target.value)}
           />
           <input
-            className="form-input"
+            className="form-input input-phone"
             placeholder="WhatsApp"
+            name="user_phone"
+            type="number"
             maxLength={10}
             pattern="[0-9]{10}"
             value={form.phone ?? ""} // Operador de coalescencia nula (??) cuando sea null o undefined, asegurando que el valor sea siempre una cadena (en este caso vacia)
             onChange={(e) => onFormChange("phone", e.target.value)}
           />
         </div>
-
+        <input
+          type="email"
+          className="form-input"
+          name="user_email"
+          placeholder="Correo electrónico"
+          value={form.email || ""}
+          onChange={(e) => onFormChange("email", e.target.value)}
+        />
         <select
           className="form-select"
           value={form.service}
+          name="service"
           onChange={(e) => onFormChange("service", e.target.value)}
         >
           <option value="">¿Qué servicio deseas?</option>
@@ -100,6 +111,7 @@ export default function BookingFormView({
           className="form-select"
           value={form.artist}
           onChange={(e) => onFormChange("artist", e.target.value)}
+          name="artist"
         >
           <option value="">Especialista (opcional)</option>
           {ARTISTS.map((a) => (

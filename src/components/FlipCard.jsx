@@ -13,10 +13,10 @@ export default function FlipCard({ service }) {
   };
 
   return (
-    <div onClick={handleFlip} className="card-rotation">
+    <div onMouseEnter={handleFlip} onMouseLeave={() => setFlipped(false)} className="card-rotation">
       <div className={`card-3d ${flipped ? "flipped" : ""}`}>
         <CardFront service={service} />
-        <CardBack service={service} onReserve={handleReserve} />
+        <CardBack service={service} />
       </div>
     </div>
   );
@@ -24,7 +24,23 @@ export default function FlipCard({ service }) {
 
 function CardFront({ service }) {
   return (
-    <div className="lum-service-card card-front">
+     <div className="lum-service-card service-card-front " style={{backgroundImage: `url(${service.img})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"}} >
+
+      <h3 className="service-card-front-content lum-team-name ">
+        {service.title}
+      </h3>
+    
+      </div>
+  );
+}
+
+function CardBack({ service }) {
+  return (
+
+    <div className="lum-service-card service-card-back">
     
       <div className="uk-card-body service-card-body">
         <h3 className="uk-card-title lum-team-name service-title">
@@ -37,16 +53,6 @@ function CardFront({ service }) {
         </div>
       </div>
     </div>
-  );
-}
-
-function CardBack({ service, onReserve }) {
-  return (
-    <div className="lum-service-card service-card-back" style={{backgroundImage: `url(${service.img})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat"}} >
-    
-      </div>
+   
   );
 }

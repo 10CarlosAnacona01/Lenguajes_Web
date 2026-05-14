@@ -155,7 +155,7 @@ background: rgba(217, 165, 174, 0.75) !important;
   color: #fff !important;
   padding: 14px 32px;
   border-radius: 50px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.92rem;
   letter-spacing: 0.04em;
 
@@ -189,8 +189,11 @@ background: rgba(217, 165, 174, 0.75) !important;
 }
 .lum-btn-ghost:hover {
   background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(244, 114, 182, 0.3);
   color: #fff !important;
+
+   text-decoration: none !important;
+  transform: translateY(-2px);
+
 }
 
 .lum-hero-stats {
@@ -232,6 +235,13 @@ background: rgba(217, 165, 174, 0.75) !important;
   background: var(--lum-bg-booking);
 }
 
+.lum-section-mid{
+  background: var(--lum-bg-mid);
+}
+
+.lum-section-mid h2,
+.lum-section-mid h3,
+.lum-section-mid p,
 .lum-section-light h2,
 .lum-section-light h3,
 .lum-section-light p,
@@ -269,6 +279,7 @@ background: rgba(217, 165, 174, 0.75) !important;
   color: var(--lum-white);
 }
 
+
 .lum-section-sub {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.62);
@@ -284,15 +295,47 @@ background: rgba(217, 165, 174, 0.75) !important;
 /* SERVICIOS — CARDS */
 .lum-service-card {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(244, 114, 182, 0.08);
   border-radius: var(--radius-lg) !important;
   overflow: hidden;
   transition:
     transform 0.25s,
     box-shadow 0.25s,
-    border-color 0.25s;
+    border-color 0.05s;
   height: 100%;
+  border: none;
   
+  
+}
+
+.service-card-front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: inherit;
+  
+  z-index: 0; /* overlay debajo */
+}
+
+.service-card-front .service-card-front-content {
+  padding: 20px 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-front{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.service-card-front-content  {
+  font-size: 1.3rem;
+  font-weight: 600;
+    color: white;
+
+  margin-bottom: 6px;
 }
 
 
@@ -385,6 +428,8 @@ background: rgba(217, 165, 174, 0.75) !important;
   perspective: 900px;
   height: 260px;
   cursor: pointer;
+  border: none !important;
+  position: relative;
 }
 
 .card-3d {
@@ -393,20 +438,34 @@ background: rgba(217, 165, 174, 0.75) !important;
   height: 100%;
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+  will-change: transform;
+    border: none !important;
+
 }
 
 /* Efecto de giro */
 .card-3d.flipped {
   transform: rotateY(180deg);
+
+}
+
+/* Tarjeta delantera */
+.card-front {
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /* Tarjeta trasera */
 .service-card-back {
   position: absolute;
   inset: 0;
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  transform: rotateY(180deg) translateZ(0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -414,10 +473,10 @@ background: rgba(217, 165, 174, 0.75) !important;
   gap: 10px;
   padding: 20px 18px;
   text-align: center;
-  -webkit-backface-visibility: hidden;
   background: rgba(34, 16, 42, 0.98);
+  border: none !important;
+  box-shadow: none !important;
 }
-
 
 
 /*  GALERÍA  */
@@ -530,10 +589,14 @@ background: rgba(217, 165, 174, 0.75) !important;
 }
 
 /* Información de la tarjeta en la parte frontal */
-.card-front {
+.service-card-back {
+    border: 1px solid rgba(242, 170, 191, 0.08) !important;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-shadow: none !important;
 }
 
 /* Botón de reserva en la parte trasera de la tarjeta */
@@ -546,6 +609,10 @@ background: rgba(217, 165, 174, 0.75) !important;
 /* RESEÑAS — cards slider */
 
 
+
+.slider-container {
+  margin-bottom: 24px;
+}
 .lum-review-card {
   background: #fff !important;
   border-radius: var(--radius-lg) !important;
@@ -820,6 +887,18 @@ background: rgba(217, 165, 174, 0.75) !important;
   width: 100%;
   -webkit-appearance: none;
 }
+
+.input-phone::-webkit-outer-spin-button,
+.input-phone::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.input-phone {
+  -moz-appearance: textfield;
+}
+
 .form-input::placeholder {
   color: rgba(255, 255, 255, 0.35);
 }
@@ -931,9 +1010,41 @@ background: rgba(217, 165, 174, 0.75) !important;
 /* FOOTER */
 .lum-footer {
   background: #0e0414;
-  padding: 64px 0 32px;
+  padding: 32px 0 16px;
   border-top: 1px solid rgba(244, 114, 182, 0.08);
+  
 }
+
+.lum-footer .uk-grid {
+  justify-content: center !important;
+}
+
+.lum-footer .uk-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.lum-footer-list {
+  align-items: center;
+  width: 100%;
+}
+
+.lum-footer-list li,
+.lum-footer-list a {
+  justify-content: center;
+  text-align: center;
+}
+
+.lum-footer-contact li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+
 .lum-footer-logo {
   font-family: var(--font-display);
   font-size: 1.6rem;

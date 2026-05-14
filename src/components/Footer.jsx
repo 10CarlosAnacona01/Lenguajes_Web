@@ -15,8 +15,10 @@ export default function Footer() {
     <footer className="lum-footer">
       <div className="uk-container">
         <div
-          className="uk-grid uk-grid-medium uk-child-width-1-1 uk-child-width-1-3@m"
+          className="uk-grid uk-grid-medium uk-child-width-1-1 uk-child-width-1-3@m "
           uk-grid=""
+          uk-scrollspy=""
+          style={{ maxWidth: "1100px", margin: "0 auto" }}
         >
           {/* Marca */}
           <div>
@@ -94,14 +96,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="lum-footer-bottom">
+    
+      </div>
+          <div className="lum-footer-bottom">
           <p>
             © {new Date().getFullYear()} PALO ROSA Spa de Uñas · Todos los
             derechos reservados
           </p>
           <p className="footer-credit">Hecho con amor en Neiva ♡</p>
         </div>
-      </div>
     </footer>
   );
 }

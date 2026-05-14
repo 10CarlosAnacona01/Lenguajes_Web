@@ -4,6 +4,7 @@ import { toDateKey } from "./bookingHelpers.js";
 import CalendarView from "./CalendarView.jsx";
 import BookingFormView from "./BookingFormView.jsx";
 import SuccessView from "./SuccessView.jsx";
+import emailjs from "@emailjs/browser";
 
 function showToast(message, status = "primary") {
   if (typeof window.UIkit !== "undefined" && window.UIkit.notification) {
@@ -16,7 +17,7 @@ function showToast(message, status = "primary") {
   }
 }
 
-const EMPTY_FORM = { name: "", phone: "", service: "", artist: "" };
+const EMPTY_FORM = { name: "", phone: "", email:"", service: "", artist: "" };
 
 export default function BookingApp() {
   const today = new Date();
@@ -77,25 +78,66 @@ export default function BookingApp() {
 
   async function handleConfirm() {
     if (!form.name || !form.phone || !form.service || !selectedSlot) return;
-    setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1200));
-    setBookedSlots((prev) => ({
-      ...prev,
-      [selectedDate.key]: [...(prev[selectedDate.key] || []), selectedSlot],
-    }));
-    setConfirmation({
-      name: form.name,
-      date: `${selectedDate.day} de ${MONTHS[selectedDate.month]} ${selectedDate.year}`,
-      time: selectedSlot,
-      service: form.service,
-      artist: form.artist || "Primera disponible",
-    });
-    setLoading(false);
-    setStep(3);
-    showToast(
-      "¡Cita confirmada! Te llegará un mensaje deWhatsApp pronto.",
-      "primary",
-    );
+
+    try {
+      setLoading(true);
+
+      const templateParams = {
+        user_name: form.name,
+
+        user_phone: form.phone,
+        user_email: form.email,
+
+        service: form.service,
+
+        artist: form.artist || "Primera disponible",
+
+        date: `${selectedDate.day} de ${MONTHS[selectedDate.month]} ${selectedDate.year}`,
+
+        hour: selectedSlot,
+      };
+
+      // ENVÍO DEL CORREO
+
+      await emailjs.send(
+        "service_nmzga3q",
+
+        "template_5zygrha",
+
+        templateParams,
+
+        "Sq8SOy-lmqLTaK7IT",
+      );
+
+      // TU LÓGICA ACTUAL
+
+      setBookedSlots((prev) => ({
+        ...prev,
+        [selectedDate.key]: [...(prev[selectedDate.key] || []), selectedSlot],
+      }));
+
+      setConfirmation({
+        name: form.name,
+
+        date: `${selectedDate.day} de ${MONTHS[selectedDate.month]} ${selectedDate.year}`,
+
+        time: selectedSlot,
+
+        service: form.service,
+
+        artist: form.artist || "Primera disponible",
+      });
+
+      setStep(3);
+
+      showToast("¡Cita confirmada! Revisa tu correo ✨", "primary");
+    } catch (error) {
+      console.log(error);
+
+      showToast("Error enviando la reservación", "danger");
+    } finally {
+      setLoading(false);
+    }
   }
 
   function handleReset() {
